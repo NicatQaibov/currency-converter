@@ -1,0 +1,204 @@
+/**************** GENERAL ****************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  letter-spacing: 1px;
+  line-height: 1.2;
+  background-color: #fff;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+
+  padding-inline: 2rem;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+/**************** HEADER ****************/
+
+header.primary-header {
+  background-color: #e5e5e5;
+  width: 100%;
+  padding-block: 1.5rem;
+
+  text-transform: uppercase;
+}
+
+header.primary-header > .container {
+  display: flex;
+  align-items: center;
+
+  gap: 8rem;
+}
+
+ul.nav-links {
+  display: flex;
+  gap: 4rem;
+}
+
+ul.nav-links > li > a.nav-link:where(:link, :visited) {
+  color: #959ba4;
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+ul.nav-links > li > a.nav-link:where(:hover, :active) {
+  opacity: 0.5;
+}
+
+ul.nav-links > li > a.nav-link.active {
+  color: #000;
+  font-weight: bold;
+}
+
+header.primary-header > .container > nav {
+  display: flex;
+  align-items: center;
+
+  width: 90%;
+}
+
+header.primary-header > .container > nav > a.log-in:where(:link, :visited) {
+  background-color: #fff;
+  color: #000;
+
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 4px;
+
+  margin-left: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+header.primary-header > .container > nav > a.log-in:where(:hover, :active) {
+  opacity: 0.7;
+}
+
+a.logo-wrapper {
+  height: 2.3rem;
+}
+
+/**************** MAIN ****************/
+main.primary-main {
+  height: calc(100vh - 65px);
+
+  padding-top: 8rem;
+}
+
+h1.heading-primary {
+  font-weight: bold;
+  font-size: 4.2rem;
+
+  margin-bottom: 4rem;
+}
+
+main.converter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currency-converter {
+  width: 60%;
+  margin-inline: auto;
+}
+span.title {
+  font-weight: 300;
+  color: #9f9f9f;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.available-currencies {
+  display: flex;
+
+  margin-bottom: 2rem;
+}
+
+.available-currencies > * {
+  border-collapse: collapse;
+
+  border: 1px solid #c6c6c6;
+  padding: 1rem 2.5rem;
+
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+div.currency.active,
+div.currency:where(:hover, :focus-within) {
+  background-color: #833ae0;
+  color: #fff;
+}
+
+div.available-currencies > div.currency:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+div.available-currencies > div.currency:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.currency-io-box {
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+  min-height: 20vh;
+
+  padding-inline: 5%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.conversion-info {
+  margin-top: auto;
+  color: #c6c6c6;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+input.input,
+.output {
+  border: none;
+  outline: none;
+
+  padding-block: 1rem;
+  max-width: 34rem;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+}

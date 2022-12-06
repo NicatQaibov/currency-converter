@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="primary-header">
+      <div class="container">
+        <a href="#" class="logo-wrapper">
+          <img src="assets/bank-logo.png" alt="Bank Logo" class="logo" />
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#" class="nav-link | active">bank</a></li>
+            <li><a href="#" class="nav-link">business</a></li>
+            <li><a href="#" class="nav-link">investments</a></li>
+            <li><a href="#" class="nav-link">insurance</a></li>
+            <li><a href="#" class="nav-link">mobile</a></li>
+            <li><a href="#" class="nav-link">travel</a></li>
+            <li><a href="#" class="nav-link">entertainment</a></li>
+          </ul>
+          <a href="#" class="log-in">Log in</a>
+        </nav>
+      </div>
+    </header>
+    <main class="primary-main">
+      <section class="currency-converter">
+        <header class="secondary-header">
+          <h1 class="heading-primary">Online currency converter</h1>
+        </header>
+
+        <main class="converter">
+          <div class="converter-input">
+            <span class="title">I have</span>
+
+            <div class="available-currencies | current">
+              <div class="currency current-currency | active" data-id="RUB">
+                rub
+              </div>
+              <div class="currency current-currency" data-id="USD">usd</div>
+              <div class="currency current-currency" data-id="EUR">eur</div>
+              <div class="currency current-currency" data-id="GBP">gbp</div>
+            </div>
+
+            <div class="currency-io-box">
+              <input type="number" class="input" />
+              <div class="conversion-info">1 RUB = 0.0135 USD</div>
+            </div>
+          </div>
+          <div class="converter-output">
+            <span class="title">I want to get</span>
+
+            <div class="available-currencies | target">
+              <div class="currency target-currency" data-id="RUB">rub</div>
+              <div class="currency target-currency | active" data-id="USD">
+                usd
+              </div>
+              <div class="currency target-currency" data-id="EUR">eur</div>
+              <div class="currency target-currency" data-id="GBP">gbp</div>
+            </div>
+
+            <div class="currency-io-box">
+              <input type="text" class="output" readonly />
+              <div class="conversion-info">1 USD = 73.8896 RUB</div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </main>
+  </body>
+</html>
